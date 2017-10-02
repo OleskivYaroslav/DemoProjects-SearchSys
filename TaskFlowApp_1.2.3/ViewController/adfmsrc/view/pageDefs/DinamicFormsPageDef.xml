@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.2" id="DinamicFormsPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Type="java.lang.String" Name="makeVO_str" IsQueriable="false"/>
+    </variableIterator>
+    <iterator Binds="ViewOdject1" RangeSize="25" DataControl="AppModuleDataControl" id="ViewOdject1Iterator"/>
+  </executables>
+  <bindings>
+    <methodAction id="makeVO" RequiresUpdateModel="true" Action="invokeMethod" MethodName="makeVO"
+                  IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                  InstanceName="bindings.makeVO.dataControl.dataProvider">
+      <NamedData NDName="str" NDType="java.lang.String" NDValue="${bindings.makeVO_str}"/>
+    </methodAction>
+    <attributeValues IterBinding="variables" id="str">
+      <AttrNames>
+        <Item Value="makeVO_str"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

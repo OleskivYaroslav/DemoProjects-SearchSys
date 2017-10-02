@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:outputText value="welcome here" id="ot1" inlineStyle="color:Lime; font-size:large;"/>
+  <af:button text="page1" id="b1" action="#{GoToPages.goToPage1}"/>
+  <af:button text="page2" id="b2" action="#{GoToPages.goToPage2}"/>
+  <af:button text="task flow" id="b3" action="#{GoToPages.goToTF}"/>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:GoToPages-->
+</jsp:root>

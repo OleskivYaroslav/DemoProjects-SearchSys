@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.12.2" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.ua.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/SearchView.jsff" usageId="com_ua_view_SearchViewPageDef"/>
+    <page path="/index.jspx" usageId="com_ua_view_indexPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_ua_view_SearchViewPageDef" path="com.ua.view.pageDefs.SearchViewPageDef"/>
+    <page id="com_ua_view_indexPageDef" path="com.ua.view.pageDefs.indexPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="EmployeePojo" path="com.ua.model.EmployeePojo"/>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.ua.model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="helloTrain">
+    <default-activity>welcome</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <view id="welcome">
+      <page>/welcome.jsff</page>
+      <train-stop/>
+    </view>
+    <view id="data">
+      <page>/data.jsff</page>
+      <train-stop/>
+    </view>
+    <view id="result">
+      <page>/result.jsff</page>
+      <train-stop/>
+    </view>
+    <train/>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

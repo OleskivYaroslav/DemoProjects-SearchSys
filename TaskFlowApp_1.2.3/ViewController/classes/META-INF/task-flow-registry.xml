@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
+   <task-flow-descriptor path="META-INF/adfc-config.xml" id="" type="" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="unspecified"/>
+   <task-flow-descriptor path="WEB-INF/BindingsFiles.xml" id="MetadataFiles" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="WEB-INF/BoundedTF.xml" id="BoundedTF" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp">
+      <input-parameter name="param"/>
+   </task-flow-descriptor>
+   <task-flow-descriptor path="WEB-INF/BusinessCompFirst.xml" id="taskFlowCall1" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="WEB-INF/BusinessCompSecond.xml" id="BusinessCompSecond" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="WEB-INF/DynamicForm.xml" id="DynamicForm" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="WEB-INF/EmpUpdateFlow.xml" id="EmpUpdateFlow" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="true" critical="false" page-type="facelets"/>
+   <task-flow-descriptor path="WEB-INF/JSTaskFlow.xml" id="JSTaskFlow" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="WEB-INF/MainSearchDemo.xml" id="MainSearchDemo" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="WEB-INF/TaskFlowDemo.xml" id="TaskFlowDemo" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="WEB-INF/helloTrain.xml" id="helloTrain" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="true" critical="false" page-type="jsp"/>
+   <task-flow-descriptor path="WEB-INF/securityFlow.xml" id="securityFlow" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp">
+      <input-parameter name="userName"/>
+   </task-flow-descriptor>
+   <task-flow-descriptor path="WEB-INF/task-flow-definition.xml" id="task-flow-definition" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false" critical="false" page-type="jsp"/>
+</task-flow-registry>

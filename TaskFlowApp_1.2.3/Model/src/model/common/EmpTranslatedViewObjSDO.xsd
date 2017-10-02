@@ -1,0 +1,29 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sdoXML="commonj.sdo/xml" xmlns:sdoJava="commonj.sdo/java"
+     targetNamespace="/model/common/" xmlns="/model/common/" elementFormDefault="qualified"
+     sdoJava:package="model.common">
+    <xsd:annotation>
+        <xsd:documentation>
+            <name>Emp Translated View Obj</name>
+        </xsd:documentation>
+    </xsd:annotation>
+    <xsd:import schemaLocation="classpath:/xml/sdoXML.xsd" namespace="commonj.sdo/xml"/>
+    <xsd:import schemaLocation="classpath:/xml/sdoJava.xsd" namespace="commonj.sdo/java"/>
+    <xsd:complexType name="EmpTranslatedViewObjSDO">
+        <xsd:annotation>
+            <xsd:appinfo source="http://xmlns.oracle.com/adf/svc/metadata/">
+                <key xmlns="http://xmlns.oracle.com/adf/svc/metadata/">
+                    <attribute>EmployeeId</attribute>
+                </key>
+            </xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="EmployeeId" type="xsd:int" minOccurs="0" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element name="FirstName" type="xsd:string" minOccurs="0" nillable="true"/>
+            <xsd:element name="LastName" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="Salary" type="xsd:decimal" minOccurs="0" nillable="true"/>
+            <xsd:element name="DepartmentId" type="xsd:int" minOccurs="0" sdoXML:dataType="sdoJava:IntObject"/>
+            <xsd:element name="DepartmentName" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="empTranslatedViewObjSDO" type="EmpTranslatedViewObjSDO"/>
+</xsd:schema>

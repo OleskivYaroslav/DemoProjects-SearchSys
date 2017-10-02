@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<features xmlns="http://xmlns.oracle.com/adf/faces/feature">
+  <feature>
+    <feature-name>TaskFlowApp_1_2_3DiagramLayout</feature-name>
+    <feature-class>js/layout/TaskFlowApp_1_2_3DiagramLayout.js</feature-class>
+  </feature>
+</features>

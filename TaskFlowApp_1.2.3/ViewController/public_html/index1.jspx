@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="index.jspx" id="d1">
+            <af:form id="f1">
+                <af:panelStretchLayout id="psl1" startWidth="88px" topHeight="34px" partialTriggers="b1 b2">
+                    <f:facet name="start">
+                        <af:group id="g1">
+                            <af:button text="button 1" id="b1" action="#{GoToPages.b1_action}" partialTriggers="r1"/>
+                            <af:button text="button 2" id="b2" partialTriggers="r1" action="#{GoToPages.b2_action}"/>
+                        </af:group>
+                    </f:facet>
+                    <f:facet name="end"/>
+                    <f:facet name="top">
+                        <f:subview id="wp"/>
+                    </f:facet>
+                    <f:facet name="bottom"/>
+                    <f:facet name="center">
+                        <af:region value="#{bindings.BoundedTF1.regionModel}" id="r1" partialTriggers="::b1 ::b2"/>
+                    </f:facet>
+                </af:panelStretchLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:GoToPages-->
+</jsp:root>

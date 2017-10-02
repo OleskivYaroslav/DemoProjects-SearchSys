@@ -1,0 +1,15 @@
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="/model/common/types/"
+     xmlns:tns="/model/common/types/" xmlns:ns0="http://xmlns.oracle.com/adf/svc/types/" xmlns:ns1="/model/common/">
+    <import namespace="/model/common/" schemaLocation="../EmpTranslatedViewObjSDO.xsd"/>
+    <import namespace="http://xmlns.oracle.com/adf/svc/types/" schemaLocation="classpath:/META-INF/wsdl/BC4JService.xsd"/>
+    <element name="DelereAllEMPL">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+    <element name="DelereAllEMPLResponse">
+        <complexType>
+            <sequence/>
+        </complexType>
+    </element>
+</schema>

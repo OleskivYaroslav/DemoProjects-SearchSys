@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="JSTaskFlow">
+    <default-activity>JSGO</default-activity>
+    <data-control-scope>
+      <shared/>
+    </data-control-scope>
+    <managed-bean id="__1">
+      <managed-bean-name>SomeBean</managed-bean-name>
+      <managed-bean-class>SomeBean</managed-bean-class>
+      <managed-bean-scope>pageFlow</managed-bean-scope>
+    </managed-bean>
+    <managed-bean id="__4">
+      <managed-bean-name>BeanClass</managed-bean-name>
+      <managed-bean-class>view.BeanClass</managed-bean-class>
+      <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <method-call id="JSGO">
+      <method>#{pageFlowScope.SomeBean.JSGO}</method>
+      <outcome>
+        <fixed-outcome>continue</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="JSview">
+      <page>/JSview.jsff</page>
+    </view>
+    <view id="view1"></view>
+    <control-flow-rule id="__2">
+      <from-activity-id>JSGO</from-activity-id>
+      <control-flow-case id="__3">
+        <from-outcome>continue</from-outcome>
+        <to-activity-id>JSview</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

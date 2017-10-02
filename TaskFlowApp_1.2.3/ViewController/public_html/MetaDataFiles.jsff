@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelSplitter id="ps1" splitterPosition="314">
+    <f:facet name="first">
+      <af:panelFormLayout id="pfl1">
+        <af:inputText value="#{bindings.DepartmentId.inputValue}" label="#{bindings.DepartmentId.hints.label}"
+                      required="#{bindings.DepartmentId.hints.mandatory}"
+                      columns="#{bindings.DepartmentId.hints.displayWidth}"
+                      maximumLength="#{bindings.DepartmentId.hints.precision}"
+                      shortDesc="#{bindings.DepartmentId.hints.tooltip}" id="it1">
+          <f:validator binding="#{bindings.DepartmentId.validator}"/>
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentId.format}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.DepartmentName.inputValue}" label="#{bindings.DepartmentName.hints.label}"
+                      required="#{bindings.DepartmentName.hints.mandatory}"
+                      columns="#{bindings.DepartmentName.hints.displayWidth}"
+                      maximumLength="#{bindings.DepartmentName.hints.precision}"
+                      shortDesc="#{bindings.DepartmentName.hints.tooltip}" id="it2">
+          <f:validator binding="#{bindings.DepartmentName.validator}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.ManagerId.inputValue}" label="#{bindings.ManagerId.hints.label}"
+                      required="#{bindings.ManagerId.hints.mandatory}"
+                      columns="#{bindings.ManagerId.hints.displayWidth}"
+                      maximumLength="#{bindings.ManagerId.hints.precision}"
+                      shortDesc="#{bindings.ManagerId.hints.tooltip}" id="it3">
+          <f:validator binding="#{bindings.ManagerId.validator}"/>
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId.format}"/>
+        </af:inputText>
+        <af:inputText value="#{bindings.LocationId.inputValue}" label="#{bindings.LocationId.hints.label}"
+                      required="#{bindings.LocationId.hints.mandatory}"
+                      columns="#{bindings.LocationId.hints.displayWidth}"
+                      maximumLength="#{bindings.LocationId.hints.precision}"
+                      shortDesc="#{bindings.LocationId.hints.tooltip}" id="it4">
+          <f:validator binding="#{bindings.LocationId.validator}"/>
+          <af:convertNumber groupingUsed="false" pattern="#{bindings.LocationId.format}"/>
+        </af:inputText>
+        <f:facet name="footer">
+          <af:panelGroupLayout layout="horizontal" id="pgl1">
+            <af:button actionListener="#{bindings.First.execute}" text="First" disabled="#{!bindings.First.enabled}"
+                       partialSubmit="true" id="b1"/>
+            <af:button actionListener="#{bindings.Previous.execute}" text="Previous"
+                       disabled="#{!bindings.Previous.enabled}" partialSubmit="true" id="b2"/>
+            <af:button actionListener="#{bindings.Next.execute}" text="Next" disabled="#{!bindings.Next.enabled}"
+                       partialSubmit="true" id="b3"/>
+            <af:button actionListener="#{bindings.Last.execute}" text="Last" disabled="#{!bindings.Last.enabled}"
+                       partialSubmit="true" id="b4"/>
+          </af:panelGroupLayout>
+        </f:facet>
+      </af:panelFormLayout>
+    </f:facet>
+    <f:facet name="second">
+      <af:panelBox text="#{bindings.LastName.inputValue}" id="pb1">
+        <f:facet name="toolbar"/>
+        <af:table value="#{bindings.EmployeesView3.collectionModel}" var="row"
+                  rows="#{bindings.EmployeesView3.rangeSize}"
+                  emptyText="#{bindings.EmployeesView3.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  rowBandingInterval="0" fetchSize="#{bindings.EmployeesView3.rangeSize}" id="t1">
+          <af:column headerText="#{bindings.EmployeesView3.hints.EmployeeId.label}" id="c1">
+            <af:outputText value="#{row.EmployeeId}" shortDesc="#{bindings.EmployeesView3.hints.EmployeeId.tooltip}"
+                           id="ot1">
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.EmployeesView3.hints.EmployeeId.format}"/>
+            </af:outputText>
+          </af:column>
+          <af:column headerText="#{bindings.EmployeesView3.hints.FirstName.label}" id="c2">
+            <af:outputText value="#{row.FirstName}" shortDesc="#{bindings.EmployeesView3.hints.FirstName.tooltip}"
+                           id="ot2"/>
+          </af:column>
+          <af:column headerText="#{bindings.EmployeesView3.hints.LastName.label}" id="c3">
+            <af:outputText value="#{row.LastName}" shortDesc="#{bindings.EmployeesView3.hints.LastName.tooltip}"
+                           id="ot3"/>
+          </af:column>
+          <af:column headerText="#{bindings.EmployeesView3.hints.Salary.label}" id="c4">
+            <af:outputText value="#{row.Salary}" shortDesc="#{bindings.EmployeesView3.hints.Salary.tooltip}" id="ot4">
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.EmployeesView3.hints.Salary.format}"/>
+            </af:outputText>
+          </af:column>
+          <af:column headerText="#{bindings.EmployeesView3.hints.DepartmentId.label}" id="c5">
+            <af:outputText value="#{row.DepartmentId}" shortDesc="#{bindings.EmployeesView3.hints.DepartmentId.tooltip}"
+                           id="ot5">
+              <af:convertNumber groupingUsed="false" pattern="#{bindings.EmployeesView3.hints.DepartmentId.format}"/>
+            </af:outputText>
+          </af:column>
+        </af:table>
+      </af:panelBox>
+    </f:facet>
+  </af:panelSplitter>
+</jsp:root>
