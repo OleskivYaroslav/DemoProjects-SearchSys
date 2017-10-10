@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelFormLayout id="pfl1">
+        <f:facet name="footer"/>
+        <af:resource type="javascript">
+          function SumFromAttribute(event) {
+           var component = event.getSource();
+           var a = require("os");
+              component.setProperty('value', 'hello');
+                
+                //a.userInfo().username;
+            //  console.log("hello1");
+            //  var evts = event.getSource();
+            //  console.log("hello2");
+            //  var sum = document.getElementById("r1:1:it3");
+           //   console.log("hello3");
+            //  var it1 = evts.getProperty("x");
+            //  console.log("hello4");
+            //  var it2 = evts.getProperty("y");
+            //  console.log("hello5");
+            //  var it3 = it1 + it2;
+            //  console.log("hello6");
+            //  sum.value = 'tfiyguiyg';
+            
+//console.log("hello8");
+            //  sum.setProperty('value', 'hello');
+            //  console.log("hello7");
+            //  sum.style.color = 'red';          
+             
+          }
+        <af:button text="gojs" id="b1" partialTriggers="it1 it2" partialSubmit="true">
+                <af:clientAttribute name="x" value="#{BeanClass.x}"/>
+                <af:clientAttribute name="y" value="#{BeanClass.y}"/>
+                <af:clientListener type= "click" method="SumFromAttribute"/> 
+                
+            </af:button>
+            
+ <af:inputText label="x" id="it1" value="#{BeanClass.x}" autoSubmit="true"/>
+ <af:inputText label="y" id="it2" value="#{BeanClass.y}" autoSubmit="true"/>
+ <af:inputText label="z" id="it3" inlineStyle="color:Red;">
+ <af:clientListener type= "click" method="SumFromAttribute"/>
+ </af:inputText>
+ 
+ </af:resource>
+    </af:panelFormLayout>
+</jsp:root>

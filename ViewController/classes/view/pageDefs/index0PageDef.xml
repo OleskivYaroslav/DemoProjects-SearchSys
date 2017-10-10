@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.2" id="index0PageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="taskFlowCall11" taskFlowId="/WEB-INF/BusinessCompFirst.xml#taskFlowCall1" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="BusinessCompSecond1" taskFlowId="/WEB-INF/BusinessCompSecond.xml#BusinessCompSecond"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="MetadataFiles1" taskFlowId="/WEB-INF/BindingsFiles.xml#MetadataFiles" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="TaskFlowDemo1" taskFlowId="/WEB-INF/TaskFlowDemo.xml#TaskFlowDemo" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="MainSearchDemo1" taskFlowId="/WEB-INF/MainSearchDemo.xml#MainSearchDemo" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="DynamicForm1" taskFlowId="/WEB-INF/DynamicForm.xml#DynamicForm" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="JSTaskFlow1" taskFlowId="/WEB-INF/JSTaskFlow.xml#JSTaskFlow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="SearchTaskFlow1" taskFlowId="/WEB-INF/SearchTaskFlow.xml#SearchTaskFlow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

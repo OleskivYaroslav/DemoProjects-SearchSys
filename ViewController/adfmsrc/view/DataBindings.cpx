@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.12.2" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/index1.jspx" usageId="view_indexPageDef"/>
+    <page path="/firstDemo.jsff" usageId="view_firstDemoPageDef"/>
+    <page path="/data.jsff" usageId="view_dataPageDef"/>
+    <page path="/result.jsff" usageId="view_resultPageDef"/>
+    <page path="/SecondBusinessComp.jsff" usageId="view_SecondBusinessCompPageDef"/>
+    <page path="/MetaDataFiles.jsff" usageId="view_MetaDataFilesPageDef"/>
+    <page path="/search.jsff" usageId="view_searchPageDef"/>
+    <page path="/update.jsff" usageId="view_updatePageDef"/>
+    <page path="/TFDemo.jsff" usageId="view_TFDemoPageDef"/>
+    <page path="/index.jspx" usageId="view_indexPageDef1"/>
+    <page path="/SearchDemo.jsff" usageId="view_SearchDemoPageDef"/>
+    <page path="/DinamicForms.jsff" usageId="view_DinamicFormsPageDef"/>
+    <page path="/SearchView.jsff" usageId="view_SearchViewPageDef"/>
+    <page path="/index.jspx" usageId="view_index0PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_indexPageDef" path="view.pageDefs.indexPageDef"/>
+    <page id="view_firstDemoPageDef" path="view.pageDefs.firstDemoPageDef"/>
+    <page id="view_dataPageDef" path="view.pageDefs.dataPageDef"/>
+    <page id="view_resultPageDef" path="view.pageDefs.resultPageDef"/>
+    <page id="view_SecondBusinessCompPageDef" path="view.pageDefs.SecondBusinessCompPageDef"/>
+    <page id="view_MetaDataFilesPageDef" path="view.pageDefs.MetaDataFilesPageDef"/>
+    <page id="view_searchPageDef" path="view.pageDefs.searchPageDef"/>
+    <page id="view_updatePageDef" path="view.pageDefs.updatePageDef"/>
+    <page id="view_TFDemoPageDef" path="view.pageDefs.TFDemoPageDef"/>
+    <page id="view_indexPageDef1" path="view.pageDefs.indexPageDef1"/>
+    <page id="view_SearchDemoPageDef" path="view.pageDefs.SearchDemoPageDef"/>
+    <page id="view_DinamicFormsPageDef" path="view.pageDefs.DinamicFormsPageDef"/>
+    <page id="view_SearchViewPageDef" path="view.pageDefs.SearchViewPageDef"/>
+    <page id="view_index0PageDef" path="view.pageDefs.index0PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="EmployeePojo" path="model.EmployeePojo"/>
+    <dc id="Hello" path="model.Hello"/>
+    <BC4JDataControl id="AppModuleDataControl" Package="model"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

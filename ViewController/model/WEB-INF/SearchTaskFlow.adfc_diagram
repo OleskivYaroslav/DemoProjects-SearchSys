@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <MethodCall
+      id="MethodCall2">
+      <property
+         name="activityId">goingToSearchView</property>
+      <property
+         name="x">307.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>goingToSearchView&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="y">186.33887</property>
+      <property
+         name="exceptionHandler">false</property>
+   </MethodCall>
+   <View
+      id="View4">
+      <property
+         name="activityId">SearchView</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">510.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>SearchView&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">184.84473</property>
+      <property
+         name="page">/SearchView.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="MethodCall2"
+      to="View4">
+      <property
+         name="fromOutcome">continue</property>
+      <property
+         name="sdm:polyPoints">R50,348.0,185.98828,469.0,184.49414,L50</property>
+   </ControlFlowCase>
+</SDM>

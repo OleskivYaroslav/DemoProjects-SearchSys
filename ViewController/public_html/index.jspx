@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="index0.jspx" id="d1">
+            <af:form id="f1">
+                <af:panelTabbed position="above" id="pt1">
+                    <af:showDetailItem id="tab1" text="Welcome Page" disclosed="true">
+                        <af:outputText value="Welcome Page" id="ot1"/>
+                    </af:showDetailItem>
+                    <af:showDetailItem id="tab2" text="Business Comp 1">
+                        <af:region value="#{bindings.taskFlowCall11.regionModel}" id="r1"/>
+                    </af:showDetailItem>
+                    <af:showDetailItem id="tab3" text="Business Comp 2">
+                        <af:region value="#{bindings.BusinessCompSecond1.regionModel}" id="r2"/>
+                    </af:showDetailItem>
+                    <af:showDetailItem id="tab4" text="ADF Bindings">
+                        <af:region value="#{bindings.MetadataFiles1.regionModel}" id="r3"/>
+                    </af:showDetailItem>
+                    <af:showDetailItem id="tab5" text="Task Flow">
+                        <af:region value="#{bindings.TaskFlowDemo1.regionModel}" id="r4"/>
+                    </af:showDetailItem>
+                    <af:showDetailItem id="tab7" text="Dynamic Form">
+                        <af:region value="#{bindings.DynamicForm1.regionModel}" id="r6"/>
+                    </af:showDetailItem>
+                    <af:showDetailItem id="tab8" text="JS Task Flow">
+                        <af:region value="#{bindings.JSTaskFlow1.regionModel}" id="r7"/>
+                    </af:showDetailItem>
+                    <af:showDetailItem id="tab9" text="Search System">
+                        <af:region value="#{bindings.SearchTaskFlow1.regionModel}" id="r8"/>
+                    </af:showDetailItem>
+                </af:panelTabbed>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>
