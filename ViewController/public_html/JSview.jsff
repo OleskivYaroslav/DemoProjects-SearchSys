@@ -6,7 +6,7 @@
         <af:resource type="javascript">
           function SumFromAttribute(event) {
            var component = event.getSource();
-           var a = require("os");
+           //var a = require("os");
               component.setProperty('value', 'hello');
                 
                 //a.userInfo().username;

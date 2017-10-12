@@ -21,8 +21,8 @@ public class AppModuleImpl extends ApplicationModuleImpl {
     public void makeVO(String str){
         ViewObject vo = this.findViewObject("ViewOdject1");
         vo.remove();
-        vo = this.createViewObjectFromQueryStmt("ViewOdject1", "SELECT * FROM employees where firstname like "+ str +
-                                                               "or lastname like "+ str+" ;");
+        vo = this.createViewObjectFromQueryStmt("ViewOdject1", "SELECT * FROM employees where first_name like '"+ str +
+                                                               "%'"+" or last_name like "+"'"+ str +"%' ");
         vo.executeQuery();
 
     }
